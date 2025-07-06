@@ -10,8 +10,7 @@ const ShowBook = () => {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    axios.get(`const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
-`)
+    axios.get(`https://book-store-project-9zfd.onrender.com/books/${id}`)
       .then(res => setBook(res.data))
       .catch(err => console.error(err));
   }, [id]);
