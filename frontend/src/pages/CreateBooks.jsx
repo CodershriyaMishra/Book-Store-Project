@@ -13,8 +13,7 @@ const CreateBooks = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
-', form)
+    await axios.post("https://book-store-project-9zfd.onrender.com/api/books", form);
       .then(() => navigate('/'))
       .catch((err) => console.error(err));
   };
