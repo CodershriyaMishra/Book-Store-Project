@@ -11,8 +11,7 @@ const DeleteBook = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
-    axios.get(`const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
-`)
+    const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");)
       .then(res => setBook(res.data))
       .catch(err => {
         console.error(err);
