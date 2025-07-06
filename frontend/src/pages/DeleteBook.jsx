@@ -18,18 +18,17 @@ const DeleteBook = () => {
         enqueueSnackbar('Failed to fetch book.', { variant: 'error' });
       });
   }, [id]);
-
-  const handleDelete = () => {
-    axios.delete(`http://localhost:5555/books/${id}`)
-      .then(() => {
-        enqueueSnackbar('Book deleted successfully.', { variant: 'success' });
-        navigate('/');
-      })
-      .catch(err => {
-        console.error(err);
-        enqueueSnackbar('Failed to delete book.', { variant: 'error' });
-      });
-  };
+const handleDelete = () => {
+  axios.delete(`https://book-store-project-9zfd.onrender.com/books/${id}`)
+    .then(() => {
+      enqueueSnackbar('Book deleted successfully.', { variant: 'success' });
+      navigate('/');
+    })
+    .catch(err => {
+      console.error(err);
+      enqueueSnackbar('Failed to delete book.', { variant: 'error' });
+    });
+};
 
   if (!book) return <div className="text-center mt-10 font-sans text-rose-500">Loading...</div>;
 
