@@ -8,7 +8,8 @@ const EditBook = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
+`)
       .then(res => setForm(res.data))
       .catch(err => console.error(err));
   }, [id]);
