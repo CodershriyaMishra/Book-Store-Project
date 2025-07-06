@@ -15,9 +15,8 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get('const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
-')
+    axios.get('https://book-store-project-9zfd.onrender.com/books')
+
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
