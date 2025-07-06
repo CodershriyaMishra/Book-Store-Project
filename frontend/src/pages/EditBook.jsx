@@ -8,22 +8,21 @@ const EditBook = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`const response = await axios.get("https://book-store-project-9zfd.onrender.com/api/books");
-`)
-      .then(res => setForm(res.data))
-      .catch(err => console.error(err));
-  }, [id]);
+  axios.get(`https://book-store-project-9zfd.onrender.com/books/${id}`)
+    .then(res => setForm(res.data))
+    .catch(err => console.error(err));
+}, [id]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.put(`http://localhost:5555/books/${id}`, form)
-      .then(() => navigate('/'))
-      .catch((err) => console.error(err));
-  };
+  e.preventDefault();
+  axios.put(`https://book-store-project-9zfd.onrender.com/books/${id}`, form)
+    .then(() => navigate('/'))
+    .catch((err) => console.error(err));
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-pastelPink font-sans">
